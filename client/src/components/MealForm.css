@@ -1,0 +1,56 @@
+/* Meal Form Styles */
+.meal-form {
+  background-color: rgba(248, 250, 248, 0.893);
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 2s ease-in-out;
+}
+
+.meal-form h3 {
+  margin-top: 0;
+  color: #055805;
+}
+
+.meal-form input,
+.meal-form select {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #055805;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.meal-form input:focus,
+.meal-form select:focus {
+  outline: none;
+  border-color: #055805;
+  box-shadow: 0 0 5px rgba(2, 52, 26, 0.5);
+}
+
+.meal-form button {
+  background-color: yellowgreen;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+}
+
+.meal-form button:hover {
+  background-color:#055805 ;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

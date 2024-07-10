@@ -1,0 +1,56 @@
+/* Users Page Styles */
+.users-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  min-height: calc(100vh - 70px); /* Adjust for the navbar height */
+  background: linear-gradient(120deg, #e0f7fa 0%, #a7ffeb 100%);
+  background-size: 400% 400%;
+  animation: gradientBackground 15s ease infinite;
+  box-sizing: border-box;
+}
+
+.user-form-container {
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 2s ease-in-out;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+.user-form-container h1 {
+  text-align: center;
+  color: #388e3c; /* Dark green */
+  margin-bottom: 20px;
+}
+
+.user-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes gradientBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

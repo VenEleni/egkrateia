@@ -1,0 +1,36 @@
+/* User Form Styles */
+.user-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-form-input {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #388e3c; /* Dark green */
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.user-form-input:focus {
+  outline: none;
+  border-color: #2e7d32; /* Darker green */
+  box-shadow: 0 0 5px rgba(46, 125, 50, 0.5);
+}
+
+.user-form-button {
+  background-color: #388e3c; /* Dark green */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+}
+
+.user-form-button:hover {
+  background-color: #2e7d32; /* Darker green */
+}

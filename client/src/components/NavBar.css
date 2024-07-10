@@ -1,0 +1,67 @@
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #055805; /* Dark green */
+  padding: 10px 20px; /* Further reduced padding */
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.1);
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-links a {
+  color: #ffeb3b; /* Yellow */
+  margin-left: 10px; /* Further reduced margin */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px; /* Ensure font size is appropriate */
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #ffeb3b; /* Yellow */
+  text-decoration: underline;
+}
+
+/* Adding some padding to the top of the main content to prevent it from being hidden under the fixed navbar */
+.main-content {
+  padding-top: 60px; /* Adjusted padding */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links a {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+

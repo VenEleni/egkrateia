@@ -1,0 +1,81 @@
+/* Home Page Styles */
+.home-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  min-height: calc(100vh - 70px); /* Adjust for the navbar height */
+  background: linear-gradient(120deg, #dde095e5 0%, #b7e4b6 100%);
+  background-size: 400% 400%;
+  animation: gradientBackground 15s ease infinite;
+  box-sizing: border-box;
+}
+
+.welcome-message {
+  flex: 1;
+  color: #055805;
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+  margin: 0 20px;
+}
+
+.meal-form-container {
+  flex: 1;
+  padding: 30px;
+  margin: 0 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes gradientBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .welcome-message {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .meal-form-container {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-message {
+    font-size: 1.5rem;
+  }
+}
+
+  

@@ -1,0 +1,207 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: linear-gradient(120deg, #dde095e5 0%, #b7e4b6 100%);
+  background-size: 400% 400%;
+  animation: gradientBackground 15s ease infinite;
+  color: #055805;
+}
+
+@keyframes gradientBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #055805;
+  padding: 15px 30px;
+  color: yellow;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+  color: yellow;
+}
+
+.navbar-links a {
+  color: #fff;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar-links a:hover {
+  text-decoration: underline;
+}
+
+/* Home Page Styles */
+.home-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+}
+
+.welcome-message {
+  flex: 1;
+  color: #055805;
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.meal-form-container {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Meal Form Styles */
+.meal-form {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 2s ease-in-out;
+}
+
+.meal-form h3 {
+  margin-top: 0;
+  color: #055805;
+}
+
+.meal-form input,
+.meal-form select {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #055805;
+  border-radius: 5px;
+}
+
+.meal-form button {
+  background-color: #055805;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.meal-form button:hover {
+  background-color: #055805;
+}
+
+/* Meals Page Styles */
+.meals-page {
+  padding: 50px;
+}
+
+.date-picker-container {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.meal-category {
+  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 2s ease-in-out;
+}
+
+.meal-category h3 {
+  color: #055805;
+}
+
+.meal-category ul {
+  list-style: none;
+  padding: 0;
+}
+
+.meal-category li {
+  background-color: #f8f9fa;
+  padding: 10px;
+  border: 1px solid #055805;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.meal-category li button {
+  background-color: #055805;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.meal-category li button:hover {
+  background-color: #055805;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .welcome-message {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .meal-form-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-brand {
+    margin-bottom: 10px;
+  }
+
+  .navbar-links a {
+    margin-left: 0;
+    margin-right: 15px;
+  }
+}

@@ -1,0 +1,85 @@
+/* Meals Page Styles */
+.meals-page {
+  padding: 50px;
+  min-height: calc(100vh - 70px); /* Adjust for the navbar height */
+  background: linear-gradient(120deg, #dde095e5 0%, #b7e4b6 100%);
+  background-size: 400% 400%;
+  animation: gradientBackground 15s ease infinite;
+  box-sizing: border-box;
+}
+
+.date-picker-container {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.meal-category {
+  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 2s ease-in-out;
+}
+
+.meal-category h3 {
+  color: #055805;
+  margin-bottom: 10px;
+}
+
+.meal-category ul {
+  list-style: none;
+  padding: 0;
+}
+
+.meal-category li {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border: 1px solid #055805;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.meal-category li button {
+  background-color: #055805;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.meal-category li button:hover {
+  background-color: #055805;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes gradientBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
