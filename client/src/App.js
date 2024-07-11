@@ -6,6 +6,7 @@ import Users from './pages/Users';
 import NavBar from './components/Navbar';
 import './App.css';
 import Dashboard from './components/Dashboard/dashboard';
+import FoodAPI from "./components/FoodAPI";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
           <Route path="/meals" element={<Meals />} />
           <Route path="/users/:action" element={<Users />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/foodapi" element={<FoodAPI />} />
         </Routes>
       </div>
     </Router>
