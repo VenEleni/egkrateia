@@ -1,0 +1,30 @@
+.dashboard-Container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    gap: 2vw;
+    flex-wrap: wrap;
+    background-color: #ddd;
+  }
+
+  .dataCard{
+    border-radius: 0.5em;
+    background-color: #efefef;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 1em;
+  }
+
+  .chart1{
+    width: 50%;
+    height: 20rem ;
+  }
+
+  .chart2{
+    width: 40%;
+    height: 20rem;
+
+  }
