@@ -14,7 +14,7 @@ const MONGO_URI = process.env.MONGO_URI;
 app.use(cors({
   origin: 'http://localhost:3000', // allow your client app
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // allowed methods
-  allowedHeaders: ['Content-Type', 'Authorization'], // allowed headers
+  allowedHeaders: ['Content-Type', 'Authorization', 'x-auth-token'], // allowed headers
   credentials: true // if you need to send cookies or other credentials
 }));
 
