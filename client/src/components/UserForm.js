@@ -1,5 +1,6 @@
 
 
+
 import React, { useState } from 'react';
 import { registerUser, loginUser } from '../services/userService';
 import './UserForm.css';
@@ -9,6 +10,7 @@ const UserForm = ({ isRegister }) => {
   const { login } = useUser();
   const [user, setUser] = useState({ username: '', email: '', password: '' });
 
+ 
 
 
   const handleChange = (e) => {
@@ -22,9 +24,11 @@ const UserForm = ({ isRegister }) => {
         await registerUser(user);
         alert("User registered successfully");
       } else {
+
         const loggedInUser = await loginUser(user);
         login(loggedInUser)
         alert('Login successful');
+
 
       }
     } catch (err) {

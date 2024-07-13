@@ -1,8 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+
+
 import { useUser } from '../userContext/UserContext';
-import './NavBar.css';
+
+import './Navbar.css';
 
 
 const NavBar = () => {
