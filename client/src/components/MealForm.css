@@ -45,6 +45,31 @@
   background-color:#055805 ;
 }
 
+.queryList{
+  background-color: rgba(222, 222, 222, 0.902);
+  display:block;
+  width: 30vw;
+  padding: 0px;
+  border: 1px solid #0558056f;
+  font-size: 16px;
+  position: absolute;
+  z-index: 999;
+}
+
+.queryList-ul{
+  list-style: none;
+}
+
+.queryList-li{
+padding: 7px;
+border-bottom: 1px solid #0558056f;
+cursor: pointer;
+}
+
+.queryList-li:last-child{
+  border-bottom: none;
+  }
+
 /* Keyframes for animations */
 @keyframes fadeIn {
   from {
