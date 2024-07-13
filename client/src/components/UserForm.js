@@ -1,4 +1,5 @@
 
+
 import React, { useState } from 'react';
 import { registerUser, loginUser } from '../services/userService';
 import './UserForm.css';
@@ -7,6 +8,7 @@ import { useUser } from '../userContext/UserContext';
 const UserForm = ({ isRegister }) => {
   const { login } = useUser();
   const [user, setUser] = useState({ username: '', email: '', password: '' });
+
 
 
   const handleChange = (e) => {
@@ -23,6 +25,7 @@ const UserForm = ({ isRegister }) => {
         const loggedInUser = await loginUser(user);
         login(loggedInUser)
         alert('Login successful');
+
       }
     } catch (err) {
       alert("Error in user form");
