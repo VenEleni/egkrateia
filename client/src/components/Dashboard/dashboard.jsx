@@ -47,6 +47,7 @@ export default function dashboard() {
             ],
           }}
         />
+        <h1></h1>
       </div>
       <div className="dataCard chart2">
         <Doughnut
