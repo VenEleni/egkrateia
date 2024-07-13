@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
+
+
+
 import { useUser } from '../userContext/UserContext';
-import './NavBar.css';
-=======
+
 import './Navbar.css';
->>>>>>> 0daa82e (Meals form changes and API Implementation)
+
 
 const NavBar = () => {
   const { user, logout } = useUser();

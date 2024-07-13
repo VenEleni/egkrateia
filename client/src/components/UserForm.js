@@ -1,4 +1,5 @@
-<<<<<<< HEAD
+
+
 
 import React, { useState } from 'react';
 import { registerUser, loginUser } from '../services/userService';
@@ -8,14 +9,8 @@ import { useUser } from '../userContext/UserContext';
 const UserForm = ({ isRegister }) => {
   const { login } = useUser();
   const [user, setUser] = useState({ username: '', email: '', password: '' });
-=======
-import React, { useState } from "react";
-import { registerUser, loginUser } from "../services/userService";
-import "./UserForm.css";
 
-const UserForm = ({ isRegister }) => {
-  const [user, setUser] = useState({ username: "", email: "", password: "" });
->>>>>>> 0daa82e (Meals form changes and API Implementation)
+ 
 
 
   const handleChange = (e) => {
@@ -29,14 +24,12 @@ const UserForm = ({ isRegister }) => {
         await registerUser(user);
         alert("User registered successfully");
       } else {
-<<<<<<< HEAD
+
         const loggedInUser = await loginUser(user);
         login(loggedInUser)
         alert('Login successful');
-=======
-        await loginUser(user);
-        alert("Login successful");
->>>>>>> 0daa82e (Meals form changes and API Implementation)
+
+
       }
     } catch (err) {
       alert("Error in user form");
