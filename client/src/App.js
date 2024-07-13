@@ -8,9 +8,14 @@ import './App.css';
 import Dashboard from './components/Dashboard/dashboard';
 import FoodAPI from "./components/FoodAPI";
 
+import { UserProvider } from './userContext/UserContext';
+
 const App = () => {
   return (
-    <Router>
+    <UserProvider>
+<Router>
+      <NavBar />
+
       <div className="main-content">
         <Routes>
           <Route path="/" element={<Home />} />
@@ -21,6 +26,8 @@ const App = () => {
         </Routes>
       </div>
     </Router>
+    </UserProvider>
+    
   );
 };
 

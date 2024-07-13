@@ -1,23 +1,23 @@
 /* Home Page Styles */
 .home-container {
+  width:70%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 50px;
   min-height: calc(100vh - 70px); /* Adjust for the navbar height */
-  background: linear-gradient(120deg, #dde095e5 0%, #b7e4b6 100%);
-  background-size: 400% 400%;
-  animation: gradientBackground 15s ease infinite;
+  animation: fadeIn 2s ease-in-out;
   box-sizing: border-box;
 }
 
 .welcome-message {
-  flex: 1;
+  /* flex: 1; */
   color: #055805;
+  background-color: transparent;
   font-size: 3rem;
   font-weight: bold;
   text-align: center;
-  animation: fadeIn 2s ease-in-out;
+  /* animation: fadeIn 2s ease-in-out; */
   margin: 0 20px;
 }
 
@@ -30,6 +30,31 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   animation: fadeIn 2s ease-in-out;
 }
+
+.box-register-login{
+  display: flex;
+  flex-direction: column;
+  align-content: center
+}
+
+.box-register-login button {
+width: 300%;
+padding: 10px 40px 10px 40px;
+background-color: #055805;
+border: none;
+margin:10px;
+}
+
+.box-register-login button {
+ cursor: pointer;
+  }
+
+.login-register-link {
+  color: #ffeb3b;
+text-decoration: none;
+font-size: 17px;
+}
+
 
 /* Keyframes for animations */
 @keyframes fadeIn {
