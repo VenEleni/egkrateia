@@ -5,10 +5,12 @@ import Meals from './pages/Meals';
 import Users from './pages/Users';
 import NavBar from './components/NavBar';
 import './App.css';
+import { UserProvider } from './userContext/UserContext';
 
 const App = () => {
   return (
-    <Router>
+    <UserProvider>
+<Router>
       <NavBar />
       <div className="main-content">
         <Routes>
@@ -18,6 +20,8 @@ const App = () => {
         </Routes>
       </div>
     </Router>
+    </UserProvider>
+    
   );
 };
 
