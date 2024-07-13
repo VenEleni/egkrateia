@@ -1,16 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Navbar.css';
+
+import { useUser } from '../userContext/UserContext';
+import './NavBar.css';
+
 
 const NavBar = () => {
+  const { user, logout } = useUser();
+
   return (
     <nav className="navbar">
       <div className="navbar-brand">Diet Tracker</div>
       <div className="navbar-links">
         <Link to="/">Home</Link>
         <Link to="/meals">Meals</Link>
-        <Link to="/users/login">Login</Link>
-        <Link to="/users/register">Register</Link>
+
+        {user && ( 
+          <>
+            <span className='username'>Hello, {user.username}!</span> 
+            <button onClick={logout} className="log-out">Logout</button> 
+          </>
+        )}
       </div>
     </nav>
   );

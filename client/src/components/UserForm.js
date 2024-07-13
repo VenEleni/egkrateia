@@ -1,9 +1,15 @@
-import React, { useState } from "react";
-import { registerUser, loginUser } from "../services/userService";
-import "./UserForm.css";
+
+
+import React, { useState } from 'react';
+import { registerUser, loginUser } from '../services/userService';
+import './UserForm.css';
+import { useUser } from '../userContext/UserContext';
 
 const UserForm = ({ isRegister }) => {
-  const [user, setUser] = useState({ username: "", email: "", password: "" });
+  const { login } = useUser();
+  const [user, setUser] = useState({ username: '', email: '', password: '' });
+
+
 
   const handleChange = (e) => {
     setUser({ ...user, [e.target.name]: e.target.value });
@@ -16,8 +22,10 @@ const UserForm = ({ isRegister }) => {
         await registerUser(user);
         alert("User registered successfully");
       } else {
-        await loginUser(user);
-        alert("Login successful");
+        const loggedInUser = await loginUser(user);
+        login(loggedInUser)
+        alert('Login successful');
+
       }
     } catch (err) {
       alert("Error in user form");
