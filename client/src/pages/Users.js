@@ -1,15 +1,15 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import UserForm from '../components/UserForm';
+// import UserForm from '../components/UserForm';
 import './Users.css';
+import LoginForm from '../components/LoginForm';
 
 const Users = () => {
   const { action } = useParams();
 
   return (
     <div>
-      <h1>{action === 'register' ? 'Register' : 'Login'}</h1>
-      <UserForm isRegister={action === 'register'} />
+      <LoginForm isRegister={action === 'register'} />
     </div>
   );
 };
