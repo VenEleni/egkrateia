@@ -25,7 +25,7 @@ const LoginForm = ({ isRegister }) => {
   });
 
   const [loginDetails, setLoginDetails] = useState({
-    username: "",
+    email: "",
     password: "",
   });
 
@@ -208,12 +208,12 @@ const LoginForm = ({ isRegister }) => {
         <form>
           <div className="user-box">
             <input
-              type="text"
-              name="username"
+              type="email"
+              name="email"
               required
               onChange={handleLoginDetails}
             />
-            <label>Username</label>
+            <label>Email</label>
           </div>
           <div className="user-box">
             <input
