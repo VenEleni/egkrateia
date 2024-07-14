@@ -16,11 +16,12 @@ const LoginForm = ({ isRegister }) => {
     email: "",
     password: "",
     age: "",
-    height: "",
-    weight: "",
     gender: "",
-    activity: "",
-    goals: "",
+    height: 0,
+    currentWeight: 0,
+    goal: "",
+    active: "",
+    goalCalories: 0,
   });
 
   const [loginDetails, setLoginDetails] = useState({
@@ -97,7 +98,7 @@ const LoginForm = ({ isRegister }) => {
           </div>
           <div className="user-box">
             <input
-              type="text"
+              type="number"
               name="age"
               required
               onChange={handleSignupDetails}
@@ -106,7 +107,7 @@ const LoginForm = ({ isRegister }) => {
           </div>
           <div className="user-box">
             <input
-              type="text"
+              type="number"
               name="height"
               required
               onChange={handleSignupDetails}
@@ -115,15 +116,20 @@ const LoginForm = ({ isRegister }) => {
           </div>
           <div className="user-box">
             <input
-              type="text"
-              name="weight"
+              type="number"
+              name="currentWeight"
               required
               onChange={handleSignupDetails}
             />
             <label>Weight (kg)</label>
           </div>
           <div className="user-box">
-            <select name="gender" required onChange={handleSignupDetails}>
+            <select
+              name="gender"
+              required
+              onChange={handleSignupDetails}
+              value={user.gender}
+            >
               <option value="selection" disabled selected>
                 Select Gender
               </option>
@@ -133,27 +139,55 @@ const LoginForm = ({ isRegister }) => {
             <label>Gender</label>
           </div>
           <div className="user-box">
-            <select name="activity" required onChange={handleSignupDetails}>
+            <select
+              id="active"
+              name="active"
+              required
+              onChange={handleSignupDetails}
+              value={user.active}
+            >
               <option value="selection" disabled selected>
                 Select Activity Level
               </option>
-              <option value="lightly_active">Lightly Active</option>
-              <option value="moderately_active">Moderately Active</option>
-              <option value="very_active">Very Active</option>
-              <option value="extra_active">Extra Active</option>
+              <option value="sedentary">I'm not active at all</option>
+              <option value="lightly active">
+                I work out once in a while{" "}
+              </option>
+              <option value="moderately active">
+                I work out 2 times/ week
+              </option>
+              <option value="very active">I work out 3-4 times/ week</option>
+              <option value="extra active">Gym is my second home</option>
             </select>
             <label>Activity Level</label>
           </div>
           <div className="user-box">
-            <select name="goals" required onChange={handleSignupDetails}>
+            <select
+              id="goal"
+              name="goal"
+              required
+              onChange={handleSignupDetails}
+              value={user.goal}
+            >
               <option value="selection" disabled selected>
                 Select Goal
               </option>
-              <option value="lose_weight">Lose Weight</option>
-              <option value="gain_weight">Gain Weight</option>
-              <option value="stay_fit">Stay Fit</option>
+              <option value="loose">I want to loose weight</option>
+              <option value="gain">I want to gain weight</option>
+              <option value="maintain">
+                I want to remain at the same weight
+              </option>
             </select>
             <label>Goals</label>
+          </div>
+          <div className="user-box">
+            <input
+              type="text"
+              name="goalCalories"
+              required
+              onChange={handleSignupDetails}
+            />
+            <label>Goal Calories</label>
           </div>
           <p>
             Already have an account?{" "}
