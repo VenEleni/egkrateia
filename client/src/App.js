@@ -3,24 +3,17 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Meals from './pages/Meals';
 import Users from './pages/Users';
-
 import Navbar from './components/Navbar';
-
 import './App.css';
 import Dashboard from './components/Dashboard/dashboard';
 import FoodAPI from "./components/FoodAPI";
-
 import { UserProvider } from './userContext/UserContext';
 
 const App = () => {
   return (
-
     <UserProvider>
 <Router>
-      <NavBar />
-
-
-   
+      <Navbar />
       <div className="main-content">
         <Routes>
           <Route path="/" element={<Home />} />
@@ -32,7 +25,6 @@ const App = () => {
       </div>
     </Router>
     </UserProvider>
-    
   );
 };
 
