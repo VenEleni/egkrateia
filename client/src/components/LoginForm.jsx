@@ -128,7 +128,7 @@ const LoginForm = ({ isRegister }) => {
               name="gender"
               required
               onChange={handleSignupDetails}
-              value={user.gender}
+              
             >
               <option value="selection" disabled selected>
                 Select Gender
@@ -144,7 +144,7 @@ const LoginForm = ({ isRegister }) => {
               name="active"
               required
               onChange={handleSignupDetails}
-              value={user.active}
+              
             >
               <option value="selection" disabled selected>
                 Select Activity Level
@@ -167,7 +167,7 @@ const LoginForm = ({ isRegister }) => {
               name="goal"
               required
               onChange={handleSignupDetails}
-              value={user.goal}
+              
             >
               <option value="selection" disabled selected>
                 Select Goal
@@ -208,12 +208,12 @@ const LoginForm = ({ isRegister }) => {
         <form>
           <div className="user-box">
             <input
-              type="email"
-              name="email"
+              type="text"
+              name="username"
               required
               onChange={handleLoginDetails}
             />
-            <label>Email</label>
+            <label>Username</label>
           </div>
           <div className="user-box">
             <input
