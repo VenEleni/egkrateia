@@ -209,7 +209,7 @@ const LoginForm = ({ isRegister }) => {
           <div className="user-box">
             <input
               type="text"
-              name="username"
+              name="email"
               required
               onChange={handleLoginDetails}
             />

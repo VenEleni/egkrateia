@@ -8,12 +8,14 @@ import './App.css';
 import Dashboard from './components/Dashboard/dashboard';
 import FoodAPI from "./components/FoodAPI";
 import { UserProvider } from './userContext/UserContext';
+import Summary from './components/Summary';
+import NotFound from './components/NotFound';
 
 const App = () => {
   return (
     <UserProvider>
 <Router>
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="main-content">
         <Routes>
           <Route path="/" element={<Home />} />
@@ -21,6 +23,9 @@ const App = () => {
           <Route path="/users/:action" element={<Users />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/foodapi" element={<FoodAPI />} />
+          <Route path="/summary" element={<Summary />} />
+          <Route path="/*" element={<NotFound />} />
+
         </Routes>
       </div>
     </Router>
