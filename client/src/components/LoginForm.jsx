@@ -1,9 +1,9 @@
-import React, { useContext, useState} from "react";
+import React, { useState } from "react";
 import { registerUser, loginUser } from "../services/userService";
 import "./LoginForm.css";
 import { useUser } from "../userContext/UserContext";
 import { useNavigate, useParams } from "react-router-dom";
-import logo from "../Assets/logo.png"
+import logo from "../Assets/logo.png";
 
 const LoginForm = ({ isRegister }) => {
   const navigate = useNavigate();
@@ -43,7 +43,7 @@ const LoginForm = ({ isRegister }) => {
         navigate("/")
       }
     } catch (err) {
-      console.log("Error in user form");
+      console.log("Error in user form", err);
     }
   };
 
@@ -59,10 +59,9 @@ const LoginForm = ({ isRegister }) => {
     setIsLogin(!isLogin);
   };
 
-
   return (
     <>
-    <img src={logo} alt="logo" style={{width: "250px"}}/>
+      <img src={logo} alt="logo" style={{ width: "250px" }} />
       <div
         className={isLogin && action === "login" ? "notDisplay" : "login-box"}
       >
@@ -127,7 +126,6 @@ const LoginForm = ({ isRegister }) => {
               name="gender"
               required
               onChange={handleSignupDetails}
-              
             >
               <option value="selection" disabled selected>
                 Select Gender
@@ -143,7 +141,6 @@ const LoginForm = ({ isRegister }) => {
               name="active"
               required
               onChange={handleSignupDetails}
-              
             >
               <option value="selection" disabled selected>
                 Select Activity Level
@@ -166,7 +163,6 @@ const LoginForm = ({ isRegister }) => {
               name="goal"
               required
               onChange={handleSignupDetails}
-              
             >
               <option value="selection" disabled selected>
                 Select Goal
@@ -178,15 +174,6 @@ const LoginForm = ({ isRegister }) => {
               </option>
             </select>
             <label>Goals</label>
-          </div>
-          <div className="user-box">
-            <input
-              type="text"
-              name="goalCalories"
-              required
-              onChange={handleSignupDetails}
-            />
-            <label>Goal Calories</label>
           </div>
           <p>
             Already have an account?{" "}
@@ -222,7 +209,7 @@ const LoginForm = ({ isRegister }) => {
               onChange={handleLoginDetails}
             />
             <label>Password</label>
-          </div>
+            </div>
           <p>
             Don't have an account yet?{" "}
             <span
