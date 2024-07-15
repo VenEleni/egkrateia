@@ -10,6 +10,7 @@ import FoodAPI from "./components/FoodAPI";
 import { UserProvider } from './userContext/UserContext';
 import Summary from './components/Summary';
 import NotFound from './components/NotFound';
+import ExerciseAPI from './components/ExerciseAPI';
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
           <Route path="/summary" element={<Summary />} />
           <Route path="/*" element={<NotFound />} />
 
+          <Route path="/exercise" element={<ExerciseAPI />} />
         </Routes>
       </div>
     </Router>

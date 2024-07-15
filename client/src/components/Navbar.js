@@ -1,11 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+
 import logo from "../Assets/logo.png"
 
 
 import { useUser } from '../userContext/UserContext';
 
 import './Navbar.css';
+
 
 
 const NavBar = () => {
