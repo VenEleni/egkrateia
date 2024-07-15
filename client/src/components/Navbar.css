@@ -1,15 +1,17 @@
 /* Navbar Styles */
 .navbar {
-  display: flex;
-  justify-content: space-between;
+  /* display: flex; */
+  /* justify-content: space-between; */
   align-items: center;
   background-color: #101c2c; /* Dark green */
   padding: 20px 20px; /* Further reduced padding */
   color: white;
+  margin-left : -210px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: fixed;
   width: 100%;
   top: 0;
+  right: 0;
   z-index: 1000;
 }
 
@@ -27,6 +29,8 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+  margin-right: 20px;
+  gap: 10px;
 }
 
 .navbar-links a {

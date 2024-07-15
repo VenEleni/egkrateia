@@ -6,6 +6,7 @@ import { getMeals, deleteMeal, updateMeal } from '../services/mealService';
 import MealForm from '../components/MealForm';
 import CalorieCalculator from '../components/CalorieCalculator';
 import './Meals.css';
+import NavBar from '../components/Navbar';
 import { FaEdit, FaTrashAlt } from 'react-icons/fa';
 import Summary from '../components/Summary';
 import { getUserCalories } from '../services/userService';
@@ -77,6 +78,7 @@ const Meals = () => {
 
   return (
     <div className="meals-page">
+      <NavBar/>
       <div className="date-picker-container">
         <DatePicker
           selected={selectedDate}
