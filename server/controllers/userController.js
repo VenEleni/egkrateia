@@ -59,4 +59,15 @@ exports.getUsers = async (req, res) => {
     console.error(e);
     res.status(500).json({ message: "Server Error" });
   }
+
+};
+
+exports.getgoalCalories = async (req, res) => {
+  try {
+    const user = await User.findOne({ user: req.user.userId});
+    console.log("got the calories and user!");
+    res.status(200).json(user);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
 };

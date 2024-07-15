@@ -1,0 +1,19 @@
+/* CustomDatePicker.css */
+
+/* Style the date picker input */
+.custom-date-picker {
+    width: 100%;
+    height: 40px; /* Increase the height */
+    padding: 10px; /* Increase the padding */
+    font-size: 16px; /* Increase the font size */
+    border: 2px solid #ffffff; /* Change the border color */
+    border-radius: 3px; /* Round the corners */
+    box-sizing: border-box;
+  }
+  
+  /* Add focus styles */
+  .custom-date-picker:focus {
+    border-color: #03e9f4; /* Darker border color on focus */
+    outline: none; /* Remove the default outline */
+  }
+  

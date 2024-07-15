@@ -27,14 +27,14 @@ body {
   align-items: center;
   background-color: #055805;
   padding: 15px 30px;
-  color: yellow;
+  color: #161313;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-brand {
   font-size: 24px;
   font-weight: bold;
-  color: yellow;
+  color: rgb(47, 144, 176);
 }
 
 .navbar-links a {
@@ -58,7 +58,7 @@ body {
 
 .welcome-message {
   flex: 1;
-  color: #055805;
+  color: #019fd7;
   font-size: 3rem;
   font-weight: bold;
   text-align: center;
@@ -82,15 +82,15 @@ body {
 /* Meal Form Styles */
 .meal-form {
   background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 10px;
+  /* border-radius: 10px; */
   padding: 30px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
   animation: fadeIn 2s ease-in-out;
 }
 
 .meal-form h3 {
   margin-top: 0;
-  color: #055805;
+  color: #019fd7;
 }
 
 .meal-form input,
@@ -99,12 +99,12 @@ body {
   width: 100%;
   margin: 10px 0;
   padding: 10px;
-  border: 1px solid #055805;
+  border: 1px solid #019fd7;
   border-radius: 5px;
 }
 
 .meal-form button {
-  background-color: #055805;
+  background-color: #019fd7;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -114,7 +114,7 @@ body {
 }
 
 .meal-form button:hover {
-  background-color: #055805;
+  background-color: #019fd7;
 }
 
 /* Meals Page Styles */
@@ -138,18 +138,18 @@ body {
 }
 
 .meal-category h3 {
-  color: #055805;
+  color: #019fd7;
 }
 
-.meal-category ul {
+.meal-category-ul {
   list-style: none;
   padding: 0;
 }
 
-.meal-category li {
+.meal-category-li {
   background-color: #f8f9fa;
   padding: 10px;
-  border: 1px solid #055805;
+  border: 1px solid #019fd7;
   border-radius: 5px;
   margin-bottom: 10px;
   display: flex;
@@ -158,8 +158,8 @@ body {
   animation: fadeIn 2s ease-in-out;
 }
 
-.meal-category li button {
-  background-color: #055805;
+.meal-category-li button {
+  background-color: #019fd7;
   color: white;
   padding: 5px 10px;
   border: none;
@@ -169,8 +169,8 @@ body {
   transition: background-color 0.3s ease;
 }
 
-.meal-category li button:hover {
-  background-color: #055805;
+.meal-category-li button:hover {
+  background-color: #03e9f4;
 }
 
 /* Media Queries for Responsiveness */
