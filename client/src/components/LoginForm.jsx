@@ -183,15 +183,6 @@ const LoginForm = ({ isRegister }) => {
             </select>
             <label>Goals</label>
           </div>
-          <div className="user-box">
-            <input
-              type="text"
-              name="goalCalories"
-              required
-              onChange={handleSignupDetails}
-            />
-            <label>Goal Calories</label>
-          </div>
           <p>
             Already have an account?{" "}
             <span onClick={() => navigate("/users/login")} className="toggles">

@@ -25,6 +25,7 @@ const MealForm = ({ refreshMeals, existingMeal, handleUpdate }) => {
     if (existingMeal) {
       await handleUpdate(meal);
     } else {
+      console.log(meal);
       await addMeal(meal);
       refreshMeals();
       setMeal({ name: '', date: '', mealType: '', calories: '' });
