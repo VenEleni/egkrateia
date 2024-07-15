@@ -16,6 +16,7 @@ const MealForm = ({ refreshMeals, existingMeal, handleUpdate }) => {
   const handleNameChange = async (e) => {
     setMeal({ ...meal, [e.target.name]: e.target.value });
     const results = await AutoCompleteFood(e.target.value);
+    console.log(results);
     setQueryList(results);
     // console.log(results);
   };
@@ -25,6 +26,7 @@ const MealForm = ({ refreshMeals, existingMeal, handleUpdate }) => {
     if (existingMeal) {
       await handleUpdate(meal);
     } else {
+      console.log(meal)
       await addMeal(meal);
       refreshMeals();
       setMeal({ name: '', date: '', mealType: '', calories: '' });
@@ -38,10 +40,12 @@ const MealForm = ({ refreshMeals, existingMeal, handleUpdate }) => {
     const calories = await getCalories(id);
     if(calories){
       setCalories(calories);
+      setMeal({ ...meal, calories: calories });
     }
     console.log(calories);
     setFoodID(id);
     setQueryList([]);
+
   }
 
   return (
@@ -49,7 +53,7 @@ const MealForm = ({ refreshMeals, existingMeal, handleUpdate }) => {
       <h3>{existingMeal ? 'Edit Meal' : 'Add Meal'}</h3>
             <input type="text" name="name" placeholder="Name" value={meal.name} onChange={handleNameChange} required />
       {
-        queryList.length >0 && (<div className='queryList'><ul className='queryList-ul'>
+        queryList.length>0 && (<div className='queryList'><ul className='queryList-ul'>
           {queryList.map((value, index)=>(<li className='queryList-li' key={index} onClick={()=>handelNameClick(value)}>{value}</li>))}
           </ul></div>)
       }
