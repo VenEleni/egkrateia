@@ -5,6 +5,7 @@ import { getMeals, deleteMeal, updateMeal } from '../services/mealService';
 import MealForm from '../components/MealForm';
 import CalorieCalculator from '../components/CalorieCalculator';
 import './Meals.css';
+import NavBar from '../components/Navbar';
 
 const Meals = () => {
   const [meals, setMeals] = useState([]);
@@ -48,6 +49,7 @@ const Meals = () => {
 
   return (
     <div className="meals-page">
+      <NavBar/>
       <div className="date-picker-container">
         <DatePicker
           selected={selectedDate}

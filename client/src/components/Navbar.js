@@ -1,17 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-
-import logo from "../Assets/logo.png"
-
-
+import { Link, useNavigate  } from 'react-router-dom';
+import logo from "../Assets/logo.png";
 import { useUser } from '../userContext/UserContext';
-
 import './Navbar.css';
-
-
 
 const NavBar = () => {
   const { user, logout } = useUser();
+  const navigate = useNavigate();
+
+  const handleLogOut=() => {
+    logout(); 
+    navigate("/");
+  }
 
   return (
     <nav className="navbar">
@@ -25,7 +25,7 @@ const NavBar = () => {
         {user && ( 
           <>
             <span className='username'>Hello, {user.username}!</span> 
-            <button onClick={logout} className="log-out">Logout</button> 
+            <button onClick={handleLogOut} className="log-out">Logout</button> 
           </>
         )}
       </div>
@@ -34,4 +34,6 @@ const NavBar = () => {
 };
 
 export default NavBar;
+
+
 

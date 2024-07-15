@@ -4,12 +4,16 @@ import './Home.css';
 import { useUser } from '../userContext/UserContext';
 import { Link } from 'react-router-dom';
 import logo from "../Assets/logo.png"
+import NavBar from '../components/Navbar';
 
 const Home = () => {
   const { user} = useUser();
 
   return (
+    <>
+    {user && <NavBar />}
     <div className="home-container">
+    
        <div className="welcome-message">
         <img className="logo" src={logo} alt="logo" />
         <h1>Stronger Everyday!</h1>
@@ -31,6 +35,7 @@ const Home = () => {
       )}
 
     </div>
+    </>
   );
 };
 
