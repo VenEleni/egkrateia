@@ -73,7 +73,7 @@ export const getCalories = async (foodId) => {
 
     const totalNutrients = res.data.totalNutrients;
     if (totalNutrients && totalNutrients.ENERC_KCAL && totalNutrients.ENERC_KCAL.quantity) {
-      return totalNutrients.ENERC_KCAL.quantity;
+      return Math.floor(totalNutrients.ENERC_KCAL.quantity);
     } else {
       console.error('Cal not found:', res.data);
       return 0;
