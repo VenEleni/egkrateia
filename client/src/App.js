@@ -7,6 +7,7 @@ import NavBar from './components/Navbar';
 import './App.css';
 import Dashboard from './components/Dashboard/dashboard';
 import FoodAPI from "./components/FoodAPI";
+import ExerciseAPI from './components/ExerciseAPI';
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
           <Route path="/users/:action" element={<Users />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/foodapi" element={<FoodAPI />} />
+          <Route path="/exercise" element={<ExerciseAPI />} />
         </Routes>
       </div>
     </Router>

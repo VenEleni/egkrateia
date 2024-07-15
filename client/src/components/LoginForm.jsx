@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState} from "react";
 import { registerUser, loginUser } from "../services/userService";
 import "./LoginForm.css";
 import { useUser } from "../userContext/UserContext";
@@ -57,10 +57,6 @@ const LoginForm = ({ isRegister }) => {
     setIsLogin(!isLogin);
   };
 
-  const showTest = () => {
-    console.log("Signup:", user);
-    console.log("Login:", loginDetails);
-  };
 
   return (
     <>
