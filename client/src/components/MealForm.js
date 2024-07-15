@@ -3,12 +3,12 @@ import { addMeal } from '../services/mealService';
 import { AutoCompleteFood, getFoodID, getNutrients, getCalories } from '../services/AutoCompleteFood';
 import './MealForm.css';
 
-const MealForm = ({ refreshMeals, existingMeal, handleUpdate }) => {
+const MealForm = ({ refreshMeals, existingMeal, handleUpdate, setEditingMeal }) => {
   const [meal, setMeal] = useState(existingMeal || { name: '', date: '', mealType: '', calories: '' });
   const [queryList, setQueryList] = useState([]);
   const [FoodID, setFoodID] = useState("");
-  const [Calories, setCalories] = useState();
-
+  const [Calories, setCalories] = useState("");
+  
   const handleChange = (e) => {
     setMeal({ ...meal, [e.target.name]: e.target.value });
   };
@@ -18,7 +18,6 @@ const MealForm = ({ refreshMeals, existingMeal, handleUpdate }) => {
     const results = await AutoCompleteFood(e.target.value);
     console.log(results);
     setQueryList(results);
-    // console.log(results);
   };
 
   const handleSubmit = async (e) => {
@@ -26,27 +25,38 @@ const MealForm = ({ refreshMeals, existingMeal, handleUpdate }) => {
     if (existingMeal) {
       await handleUpdate(meal);
     } else {
-      console.log(meal)
+      // console.log(meal)
       await addMeal(meal);
       refreshMeals();
       setMeal({ name: '', date: '', mealType: '', calories: '' });
+      setCalories('');
     }
   };
 
   const handelNameClick = async (value) =>{
-    setMeal({ ...meal, name: value });
+    console.log("The clicked meal is:" + value);
+    setMeal(prevMeal => ({
+      ...prevMeal,
+      name: value
+    }));
     const id = await getFoodID(value);
     console.log(id);
     const calories = await getCalories(id);
     if(calories){
       setCalories(calories);
-      setMeal({ ...meal, calories: calories });
+      setMeal(prevMeal => ({
+        ...prevMeal,
+        calories: calories
+      }));
     }
     console.log(calories);
     setFoodID(id);
     setQueryList([]);
-
   }
+
+  const handleCancel = () => {
+    setEditingMeal(null);
+  };
 
   return (
     <form className="meal-form" onSubmit={handleSubmit}>
@@ -66,6 +76,7 @@ const MealForm = ({ refreshMeals, existingMeal, handleUpdate }) => {
       </select>
       <input type="number" name="calories" placeholder="Calories" value={(Calories) ? Calories : meal.calories} onChange={handleChange} required />
       <button type="submit">{existingMeal ? 'Update Meal' : 'Add Meal'}</button>
+      {existingMeal && <button onClick={handleCancel}>{existingMeal ? 'Cancel' : ''}</button>}
     </form>
   );
 };

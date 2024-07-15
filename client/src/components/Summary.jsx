@@ -9,7 +9,7 @@ import { BsFire } from "react-icons/bs";
 
 import { Doughnut } from "react-chartjs-2";
 
-export default function Summary() {
+export default function Summary({Base, Food, Exercise}) {
   const [data, setData] = useState([
     {
       label: "Remaining",
@@ -18,17 +18,17 @@ export default function Summary() {
     },
     {
       label: "Base Goal",
-      value: 2000,
+      value: Base,
       color: "#03e9f4",
     },
     {
       label: "Food",
-      value: 1786,
+      value: Food,
       color: "#019fd7",
     },
     {
       label: "Exercise",
-      value: 586,
+      value: Exercise,
       color: "#bae5fa",
     },
   ]);
