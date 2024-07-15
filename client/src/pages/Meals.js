@@ -8,6 +8,8 @@ import CalorieCalculator from '../components/CalorieCalculator';
 import './Meals.css';
 import { FaEdit, FaTrashAlt } from 'react-icons/fa';
 import Summary from '../components/Summary';
+import { getUserCalories } from '../services/userService';
+// import { base } from '../../../server/models/Meal';
 
 const Meals = () => {
   const [meals, setMeals] = useState([]);
@@ -22,9 +24,31 @@ const Meals = () => {
     setMeals(response.data);
   };
 
-  useEffect(() => {
-    fetchMeals();
+  const fetchUserCalories = async () => {
+    const base = await getUserCalories();
+    if (base) {
+      SetBaseCalories(base);
+    }
+    console.log(base);
+  };
+
+  useEffect( () => {
+    const fetchData = async () => {
+      await fetchMeals();
+      await fetchUserCalories();
+    };
+
+    fetchData();
   }, []);
+
+  useEffect(() => {
+    if (meals.length > 0) {
+      const food = meals.reduce((total, meal) => total + meal.calories, 0);
+      SetFoodCalories(food);
+      console.log(food);
+    }
+  }, [meals]); // Depend on meals state
+
 
   const handleDelete = async (id) => {
     await deleteMeal(id);
@@ -63,8 +87,12 @@ const Meals = () => {
       </div>
       <div className='data-container'>
       <div className='left-side'>
-      <Summary Base={2000} Food={100} Exercise={400} />  
-      <CalorieCalculator meals={filteredMeals} dailyCalorieGoal={BaseCalories} />
+      {BaseCalories !== 0 ? (
+        <Summary Base={BaseCalories} Food={FoodCalories} Exercise={300} />
+      ) : (
+        <div>Loading...</div> 
+      )}
+      {/* <CalorieCalculator meals={filteredMeals} dailyCalorieGoal={BaseCalories} /> */}
       </div>
     <div className='right-side'>
     {['Breakfast', 'Lunch', 'Dinner'].map((mealType) => (

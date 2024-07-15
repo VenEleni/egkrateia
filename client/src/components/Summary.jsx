@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import "./Summary.css";
@@ -33,9 +33,32 @@ export default function Summary({Base, Food, Exercise}) {
     },
   ]);
 
-  data[0].value += data[1].value;
-  data[0].value -= data[2].value;
-  data[0].value += data[3].value;
+  useEffect(() => {
+    const remaining = Base - Food + Exercise;
+    setData([
+      {
+        label: "Remaining",
+        value: remaining,
+        color: "gray",
+      },
+      {
+        label: "Base Goal",
+        value: Base,
+        color: "#03e9f4",
+      },
+      {
+        label: "Food",
+        value: Food,
+        color: "#019fd7",
+      },
+      {
+        label: "Exercise",
+        value: Exercise,
+        color: "#bae5fa",
+      },
+    ]);
+  }, [Base, Food, Exercise]);
+
 
   return (
     <div className="summary-container">
