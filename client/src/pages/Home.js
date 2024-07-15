@@ -27,10 +27,13 @@ const Home = () => {
       :
       (
         <>
-        <div className="meal-form-container">
-        <MealForm refreshMeals={() => {}} />
+        <div className='box-register-login'>
+          <Link className="login-register-link" to="/myprofile"><button>My Profile</button></Link>
+          <Link className="login-register-link" to="/meals"><button>Dashboard</button></Link>
+        </div>
+        {/* <div className="meal-form-container">
 
-      </div>
+      </div> */}
         </>
       )}
 

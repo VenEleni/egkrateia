@@ -20,11 +20,15 @@ const NavBar = () => {
       </div>
       <div className="navbar-links">
         <Link to="/">Home</Link>
-        <Link to="/meals">Meals</Link>
+        <Link to="/meals">Dashboard</Link>
+        <Link to="/addmeals">Add Meal</Link>
+        <Link to="/exercise">Add Exercise</Link>
 
         {user && ( 
           <>
             <span className='username'>Hello, {user.username}!</span> 
+            <Link to="/myprofile">My Profile</Link>
+
             <button onClick={handleLogOut} className="log-out">Logout</button> 
           </>
         )}
