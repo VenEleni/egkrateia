@@ -12,7 +12,7 @@ const Home = () => {
     <div className="home-container">
        <div className="welcome-message">
         <img className="logo" src={logo} alt="logo" />
-        <h1>Let's get healthy!</h1>
+        <h1>Stronger Everyday!</h1>
       </div>
       {!user ? (
         <div className='box-register-login'>

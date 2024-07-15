@@ -39,12 +39,12 @@
 }
 
 .navbar-links a:hover {
-  color: #019fd7; /* Yellow */
+  color: #019fd7; 
   text-decoration: none;
 }
 
 .username{
-  color: #ffffff; /* Yellow */
+  color: #ffffff; 
   margin-left: 10px; /* Further reduced margin */
   font-weight: bold;
   font-size: 16px; /* Ensure font size is appropriate */
@@ -52,7 +52,7 @@
 }
 
 .log-out {
-  color: #ffeb3b; /* Yellow */
+  color: #019fd7; 
   background-color: transparent;
   border: none;
   font-weight: bold;
