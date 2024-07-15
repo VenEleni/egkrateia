@@ -3,8 +3,8 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const mealRoutes = require('./routes/meals');
 const userRoutes = require('./routes/users');
-const dotenv = require('dotenv');
-
+const exerciseRoutes = require("./routes/exercise");
+const dotenv = require("dotenv")
 dotenv.config();
 
 const app = express();
@@ -32,6 +32,7 @@ app.options('*', cors());
 
 app.use('/meals', mealRoutes);
 app.use('/users', userRoutes);
+app.use('/exercise', exerciseRoutes)
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
