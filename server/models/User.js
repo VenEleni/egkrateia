@@ -51,7 +51,7 @@ UserSchema.pre('save', function (next){
     goalCalories = totalCalories; 
   }
 
-  user.goalCalories = goalCalories;
+  user.goalCalories = Math.floor(goalCalories);
   console.log (user)
   next();
 })

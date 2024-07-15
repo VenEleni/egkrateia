@@ -16,3 +16,9 @@ export const loginUser = async (user) => {
   return userData.user;
 };
 
+export const getUserCalories = async () => {
+  const response = await axios.get(`${API_URL}/calories`,{
+    headers: { "x-auth-token": `${localStorage.getItem("token")}` }
+  });
+  return response.data;
+};

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import "./Summary.css";
@@ -9,7 +9,7 @@ import { BsFire } from "react-icons/bs";
 
 import { Doughnut } from "react-chartjs-2";
 
-export default function Summary() {
+export default function Summary({Base, Food, Exercise}) {
   const [data, setData] = useState([
     {
       label: "Remaining",
@@ -18,24 +18,47 @@ export default function Summary() {
     },
     {
       label: "Base Goal",
-      value: 2000,
+      value: Base,
       color: "#03e9f4",
     },
     {
       label: "Food",
-      value: 1786,
+      value: Food,
       color: "#019fd7",
     },
     {
       label: "Exercise",
-      value: 586,
+      value: Exercise,
       color: "#bae5fa",
     },
   ]);
 
-  data[0].value += data[1].value;
-  data[0].value -= data[2].value;
-  data[0].value += data[3].value;
+  useEffect(() => {
+    const remaining = Base - Food + Exercise;
+    setData([
+      {
+        label: "Remaining",
+        value: remaining,
+        color: "gray",
+      },
+      {
+        label: "Base Goal",
+        value: Base,
+        color: "#03e9f4",
+      },
+      {
+        label: "Food",
+        value: Food,
+        color: "#019fd7",
+      },
+      {
+        label: "Exercise",
+        value: Exercise,
+        color: "#bae5fa",
+      },
+    ]);
+  }, [Base, Food, Exercise]);
+
 
   return (
     <div className="summary-container">

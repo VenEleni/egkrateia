@@ -29,12 +29,12 @@
   margin-bottom: 10px;
 }
 
-.meal-category ul {
+.meal-category-ul {
   list-style: none;
   padding: 0;
 }
 
-.meal-category li {
+.meal-category-li {
   background-color: #f8f9fa;
   padding: 15px;
   border: 1px solid #03e9f4;
@@ -46,7 +46,19 @@
   animation: fadeIn 2s ease-in-out;
 }
 
-.meal-category li button {
+.icon{
+  color: #019fd7;
+  width: 30px;
+  cursor: pointer;
+}
+
+.icon:hover{
+  color: #03e9f4;
+  width: 30px;
+  cursor: pointer;
+}
+
+.meal-category-li button {
   background-color: #03e9f4;
   color: white;
   padding: 5px 10px;
@@ -57,7 +69,7 @@
   transition: background-color 0.3s ease;
 }
 
-.meal-category li button:hover {
+.meal-category-li button:hover {
   background-color: #019fd7;
 }
 
@@ -69,6 +81,15 @@
   to {
     opacity: 1;
   }
+}
+
+.data-container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-side, .right-side{
+  flex: 1
 }
 
 @keyframes gradientBackground {

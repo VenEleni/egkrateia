@@ -1,9 +1,9 @@
 /* Meal Form Styles */
 .meal-form {
   background-color: rgba(248, 250, 248, 0.893);
-  border-radius: 10px;
+  /* border-radius: 10px; */
   padding: 30px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
   animation: fadeIn 2s ease-in-out;
 }
 
@@ -58,13 +58,18 @@
 
 .queryList-ul{
   list-style: none;
+  padding: 0px;
 }
 
 .queryList-li{
-padding: 7px;
+padding: 10px 30px;
 border-bottom: 1px solid #bae5fa;
 cursor: pointer;
 }
+
+.queryList-li:hover{
+  background-color: #f3fbff;
+  }
 
 .queryList-li:last-child{
   border-bottom: none;
