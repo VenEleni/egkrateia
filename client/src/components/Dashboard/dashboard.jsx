@@ -15,17 +15,17 @@ const data = [
   {
     label: "a",
     value: 120,
-    color: "rgba(43, 63, 229, 0.8)"
+    color: "#03e9f4"
   },
   {
     label: "b",
     value: 600,
-    color: "rgba(250, 192, 19, 0.8)"
+    color: "#019fd7"
   },
   {
     label: "c",
     value: 350,
-    color: "rgba(253, 135, 135, 0.8)"
+    color: "#bae5fa"
   }
 ]
 

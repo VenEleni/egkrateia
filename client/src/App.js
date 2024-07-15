@@ -15,7 +15,7 @@ const App = () => {
   return (
     <UserProvider>
 <Router>
-      {/* <Navbar /> */}
+      <Navbar />
       <div className="main-content">
         <Routes>
           <Route path="/" element={<Home />} />

@@ -5,7 +5,7 @@ body {
   background: linear-gradient(120deg, #dde095e5 0%, #b7e4b6 100%);
   background-size: 400% 400%;
   animation: gradientBackground 15s ease infinite;
-  color: #055805;
+  color: #192b41;
 }
 
 @keyframes gradientBackground {

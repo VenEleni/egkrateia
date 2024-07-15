@@ -19,17 +19,17 @@ export default function Summary() {
     {
       label: "Base Goal",
       value: 2000,
-      color: "rgba(43, 63, 229, 0.8)",
+      color: "#03e9f4",
     },
     {
       label: "Food",
       value: 1786,
-      color: "rgba(250, 192, 19, 0.8)",
+      color: "#019fd7",
     },
     {
       label: "Exercise",
       value: 586,
-      color: "rgba(253, 135, 135, 0.8)",
+      color: "#bae5fa",
     },
   ]);
 

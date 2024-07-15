@@ -1,22 +1,21 @@
 /* Home Page Styles */
 .home-container {
-  width:70%;
+  width:80vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 50px;
   min-height: calc(100vh - 70px); /* Adjust for the navbar height */
   animation: fadeIn 2s ease-in-out;
-  box-sizing: border-box;
 }
 
 .welcome-message {
-  /* flex: 1; */
-  color: #055805;
+  flex: 1;
+  color: #03e9f4;
   background-color: transparent;
   font-size: 3rem;
   font-weight: bold;
-  text-align: center;
+  text-align: left;
   /* animation: fadeIn 2s ease-in-out; */
   margin: 0 20px;
 }
@@ -33,28 +32,37 @@
 
 .box-register-login{
   display: flex;
+  flex: 1;
   flex-direction: column;
   align-content: center
 }
 
 .box-register-login button {
-width: 300%;
+width: 100%;
 padding: 10px 40px 10px 40px;
-background-color: #055805;
+background-color: #019fd7;
 border: none;
 margin:10px;
 }
+
+.box-register-login button:hover {
+  background-color: #03e9f4;
+  }
 
 .box-register-login button {
  cursor: pointer;
   }
 
 .login-register-link {
-  color: #ffeb3b;
+  color: white;
 text-decoration: none;
 font-size: 17px;
 }
 
+.logo{
+  width: 200px;
+  display: flex;
+}
 
 /* Keyframes for animations */
 @keyframes fadeIn {

@@ -15,6 +15,9 @@
 /* App Styles */
 .main-content {
   padding-top: 70px; /* Adjust based on the navbar height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .App-header {

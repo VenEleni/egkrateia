@@ -1,8 +1,9 @@
 /* Meals Page Styles */
 .meals-page {
   padding: 50px;
+  width: 100vw;
   min-height: calc(100vh - 70px); /* Adjust for the navbar height */
-  background: linear-gradient(120deg, #dde095e5 0%, #b7e4b6 100%);
+  background: linear-gradient(120deg, #192b41 0%, #192b41 100%);
   background-size: 400% 400%;
   animation: gradientBackground 15s ease infinite;
   box-sizing: border-box;
@@ -24,7 +25,7 @@
 }
 
 .meal-category h3 {
-  color: #055805;
+  color: #019fd7;
   margin-bottom: 10px;
 }
 
@@ -36,7 +37,7 @@
 .meal-category li {
   background-color: #f8f9fa;
   padding: 15px;
-  border: 1px solid #055805;
+  border: 1px solid #03e9f4;
   border-radius: 5px;
   margin-bottom: 10px;
   display: flex;
@@ -46,7 +47,7 @@
 }
 
 .meal-category li button {
-  background-color: #055805;
+  background-color: #03e9f4;
   color: white;
   padding: 5px 10px;
   border: none;
@@ -57,7 +58,7 @@
 }
 
 .meal-category li button:hover {
-  background-color: #055805;
+  background-color: #019fd7;
 }
 
 /* Keyframes for animations */

@@ -9,7 +9,7 @@
 
 .meal-form h3 {
   margin-top: 0;
-  color: #055805;
+  color: #019fd7;
 }
 
 .meal-form input,
@@ -18,7 +18,7 @@
   width: 100%;
   margin: 10px 0;
   padding: 10px;
-  border: 1px solid #055805;
+  border: 1px solid #03e9f4;
   border-radius: 5px;
   font-size: 16px;
 }
@@ -26,12 +26,12 @@
 .meal-form input:focus,
 .meal-form select:focus {
   outline: none;
-  border-color: #055805;
-  box-shadow: 0 0 5px rgba(2, 52, 26, 0.5);
+  border-color: #03e9f4;
+  box-shadow: 0 0 5px #019fd7;
 }
 
 .meal-form button {
-  background-color: yellowgreen;
+  background-color: #03e9f4;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -42,15 +42,15 @@
 }
 
 .meal-form button:hover {
-  background-color:#055805 ;
+  background-color:#019fd7 ;
 }
 
 .queryList{
-  background-color: rgba(222, 222, 222, 0.902);
+  background-color: #e4f5fd;
   display:block;
   width: 30vw;
   padding: 0px;
-  border: 1px solid #0558056f;
+  border: 1px solid #bae5fa;
   font-size: 16px;
   position: absolute;
   z-index: 999;
@@ -62,7 +62,7 @@
 
 .queryList-li{
 padding: 7px;
-border-bottom: 1px solid #0558056f;
+border-bottom: 1px solid #bae5fa;
 cursor: pointer;
 }
 

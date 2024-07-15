@@ -3,12 +3,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #055805; /* Dark green */
-  padding: 10px 20px; /* Further reduced padding */
+  background-color: #101c2c; /* Dark green */
+  padding: 20px 20px; /* Further reduced padding */
   color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: fixed;
-  width: 98%;
+  width: 100%;
   top: 0;
   z-index: 1000;
 }
@@ -30,7 +30,7 @@
 }
 
 .navbar-links a {
-  color: #ffeb3b; /* Yellow */
+  color: #bae5fa; /* Yellow */
   margin-left: 10px; /* Further reduced margin */
   text-decoration: none;
   font-weight: bold;
@@ -39,8 +39,8 @@
 }
 
 .navbar-links a:hover {
-  color: #ffeb3b; /* Yellow */
-  text-decoration: underline;
+  color: #019fd7; /* Yellow */
+  text-decoration: none;
 }
 
 .username{

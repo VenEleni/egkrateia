@@ -3,6 +3,7 @@ import { registerUser, loginUser } from "../services/userService";
 import "./LoginForm.css";
 import { useUser } from "../userContext/UserContext";
 import { useNavigate, useParams } from "react-router-dom";
+import logo from "../Assets/logo.png"
 
 const LoginForm = ({ isRegister }) => {
   const navigate = useNavigate();
@@ -39,6 +40,7 @@ const LoginForm = ({ isRegister }) => {
         const loggedInUser = await loginUser(loginDetails);
         login(loggedInUser);
         console.log("Login successful");
+        navigate("/")
       }
     } catch (err) {
       console.log("Error in user form");
@@ -64,6 +66,7 @@ const LoginForm = ({ isRegister }) => {
 
   return (
     <>
+    <img src={logo} alt="logo" style={{width: "250px"}}/>
       <div
         className={isLogin && action === "login" ? "notDisplay" : "login-box"}
       >

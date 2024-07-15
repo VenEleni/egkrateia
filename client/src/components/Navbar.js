@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import logo from "../Assets/logo.png"
 
 
 import { useUser } from '../userContext/UserContext';
@@ -13,7 +13,9 @@ const NavBar = () => {
 
   return (
     <nav className="navbar">
-      <div className="navbar-brand">Diet Tracker</div>
+      <div className="navbar-brand">
+        <a href='/'><img src={logo} alt="logo" style={{width: "180px"}} /></a>
+      </div>
       <div className="navbar-links">
         <Link to="/">Home</Link>
         <Link to="/meals">Meals</Link>

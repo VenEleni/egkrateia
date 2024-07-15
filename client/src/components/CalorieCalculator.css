@@ -17,7 +17,7 @@
   }
   
   .calculate-button {
-    background-color: #388e3c; /* Dark green */
+    background-color: #019fd7; /* Dark green */
     color: white;
     padding: 10px 20px;
     border: none;
@@ -28,6 +28,6 @@
   }
   
   .calculate-button:hover {
-    background-color: #2e7d32; /* Darker green */
+    background-color: #03e9f4; /* Darker green */
   }
   

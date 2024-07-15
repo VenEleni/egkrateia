@@ -8,12 +8,13 @@
   align-content: center;
   gap: 2vw;
   flex-wrap: wrap;
-  background-color: #ddd;
+  background-color: #192b41;
+  color: #192b41;
 }
 
 .summary-wrapper {
   border-radius: 0.5em;
-  background-color: #efefef;
+  background-color: #e4f5fd;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   padding: 3em;
 }
