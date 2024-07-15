@@ -12,7 +12,7 @@ export const AutoCompleteFood = async (query) => {
     catch(error){
       console.error(error);
     }
-}
+}       
 
 export const getFoodID = async (query) => {
   const API_URL = 'https://api.edamam.com/api/food-database/v2/parser';

@@ -11,6 +11,8 @@ import { UserProvider } from './userContext/UserContext';
 import Summary from './components/Summary';
 import NotFound from './components/NotFound';
 import ExerciseAPI from './components/ExerciseAPI';
+import Addmeal from './pages/Addmeal';
+import Myprofile from './pages/Myprofile';
 
 const App = () => {
   return (
@@ -20,10 +22,11 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/meals" element={<Meals />} />
+          <Route path="/addmeals" element={<Addmeal />} />
           <Route path="/users/:action" element={<Users />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/foodapi" element={<FoodAPI />} />
-          <Route path="/summary" element={<Summary />} />
+          <Route path="/myprofile" element={<Myprofile />} />
           <Route path="/*" element={<NotFound />} />
 
           <Route path="/exercise" element={<ExerciseAPI />} />
