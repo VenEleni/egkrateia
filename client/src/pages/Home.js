@@ -16,12 +16,8 @@ const Home = () => {
       </div>
       {!user ? (
         <div className='box-register-login'>
-        <button>
-          <Link className="login-register-link" to="/users/login">Login</Link>
-        </button>
-        <button>
-          <Link className="login-register-link" to="/users/register">Register</Link>
-        </button>
+          <Link className="login-register-link" to="/users/login"><button>Login</button></Link>
+          <Link className="login-register-link" to="/users/register"><button>Register</button></Link>
         </div>
       )
       :

@@ -9,10 +9,11 @@ export const getMeals = async () => {
 };
 
 export const addMeal = async (meal) => {
+  console.log(localStorage.getItem("token"));
   return await axios.post(API_URL, meal,
   {
     headers: { "x-auth-token": `${localStorage.getItem("token")}` }
-  });;
+  });
 };
 
 export const updateMeal = async (id, meal) => {
