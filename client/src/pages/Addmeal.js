@@ -9,7 +9,7 @@ function Addmeal() {
   return (
     <>
     <NavBar/>
-    <MealForm refreshMeals={() => {}} style={{ marginTop: '600px' }} />
+    <MealForm refreshMeals={() => {}} />
     </>
   )
 }
