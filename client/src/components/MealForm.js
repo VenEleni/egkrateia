@@ -50,14 +50,17 @@ const MealForm = ({ refreshMeals, existingMeal, handleUpdate, setEditingMeal }) 
     const id = await getFoodID(value);
     console.log(id);
     const calories = await getCalories(id);
-    if(calories){
+    if(typeof(calories) !== Number){
       setCalories(calories);
       setMeal(prevMeal => ({
         ...prevMeal,
         calories: calories
       }));
     }
-    console.log(calories);
+    else{
+      setCalories(null);
+    }
+    // console.log(calories);
     setFoodID(id);
     setQueryList([]);
   }
