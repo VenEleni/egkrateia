@@ -104,7 +104,7 @@ Follow these steps to install and run Egkrateia locally:
 10. Open your browser and navigate to `http://localhost:3000`.
 
 
-## You can also use our App by clicking here [Egkrateia App]()
+## You can also use our App by clicking here [Egkrateia App](https://egkrateia.netlify.app/)
 
 ## Usage
 
