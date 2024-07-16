@@ -84,8 +84,9 @@ const MealForm = ({ refreshMeals, existingMeal, handleUpdate, setEditingMeal }) 
       </select>
       <input type="number" name="calories" placeholder="Calories" value={(Calories) ? Calories : meal.calories} onChange={handleChange} required />
       <button type="submit">{existingMeal ? 'Update Meal' : 'Add Meal'}</button>
-      {/* <Link to="/meals"><button>Cancel</button></Link> */}
+
       {existingMeal && <button onClick={handleCancel}>{existingMeal ? 'Cancel' : ''}</button>}
+
     </form>
   );
 };
