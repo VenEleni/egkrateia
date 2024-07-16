@@ -46,6 +46,38 @@
   animation: fadeIn 2s ease-in-out;
 }
 
+
+.exercise-category {
+  margin-bottom: 20px;
+  background-color: #019fd7;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 2s ease-in-out;
+}
+
+.exercise-category h3 {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.exercise-category-ul {
+  list-style: none;
+  padding: 0;
+}
+
+.exercise-category-li {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border: 1px solid #1f5658;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
 .icon{
   color: #019fd7;
   width: 30px;
