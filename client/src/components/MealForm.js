@@ -5,13 +5,16 @@ import './MealForm.css';
 import { useNavigate, Link } from 'react-router-dom';
 
 const MealForm = ({ refreshMeals, existingMeal, handleUpdate, setEditingMeal }) => {
-  const [meal, setMeal] = useState(existingMeal || { name: '', date: '', mealType: '', calories: '' });
+  const currentDate = new Date().toISOString().substring(0, 10);
+  const [meal, setMeal] = useState(existingMeal || { name: '',date: existingMeal?.date?.split('T')[0] || currentDate, mealType: '', calories: '' });
   const [queryList, setQueryList] = useState([]);
   const [FoodID, setFoodID] = useState("");
   const [Calories, setCalories] = useState("");
 
   const navigate = useNavigate()
   
+
+
   const handleChange = (e) => {
     setMeal({ ...meal, [e.target.name]: e.target.value });
   };

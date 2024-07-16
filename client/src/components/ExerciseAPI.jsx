@@ -6,10 +6,11 @@ import { addExercise } from "../services/exerciseService";
 import {useNavigate, Link} from "react-router-dom"
 
 function ExerciseAPI() {
+    const currentDate = new Date().toISOString().substring(0, 10);
   const [activity, setActivity] = useState("");
   const [activitys, setActivitys] = useState({
     name: "",
-    date: "",
+    date: currentDate,
     totalCalories: 0,
   });
   const [queryList, setQueryList] = useState([]);
