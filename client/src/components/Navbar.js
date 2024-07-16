@@ -4,7 +4,7 @@ import logo from "../Assets/logo.png";
 import { useUser } from '../userContext/UserContext';
 import './Navbar.css';
 
-const NavBar = () => {
+const Navbar = () => {
   const { user, logout } = useUser();
   const navigate = useNavigate();
 
@@ -37,7 +37,7 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default Navbar;
 
 
 

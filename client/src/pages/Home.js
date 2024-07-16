@@ -4,14 +4,14 @@ import './Home.css';
 import { useUser } from '../userContext/UserContext';
 import { Link } from 'react-router-dom';
 import logo from "../Assets/logo.png"
-import NavBar from '../components/Navbar';
+import Navbar from '../components/Navbar';
 
 const Home = () => {
   const { user} = useUser();
 
   return (
     <>
-    {user && <NavBar />}
+    {user && <Navbar />}
     <div className="home-container">
     
        <div className="welcome-message">

@@ -3,12 +3,12 @@ import MealForm from '../components/MealForm';
 import "./Addmeal.css"
 
 import React from 'react'
-import NavBar from '../components/Navbar';
+import Navbar from '../components/Navbar';
 
 function Addmeal() {
   return (
     <>
-    <NavBar/>
+    <Navbar/>
     <MealForm refreshMeals={() => {}} />
     </>
   )

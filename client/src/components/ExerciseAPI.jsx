@@ -4,7 +4,7 @@ import axios from "axios";
 import "./ExerciseAPI.css";
 import { addExercise } from "../services/exerciseService";
 import {useNavigate, Link} from "react-router-dom";
-import NavBar from "./Navbar";
+import Navbar from "./Navbar";
 
 function ExerciseAPI() {
     const currentDate = new Date().toISOString().substring(0, 10);
@@ -76,7 +76,7 @@ function ExerciseAPI() {
 
   return (
     <>
-    <NavBar/>
+    <Navbar/>
     <div className="Exercise-Container">
       <form className="meal-form" onSubmit={handleAddExercise}>
         <h3>Add Exercise</h3>
