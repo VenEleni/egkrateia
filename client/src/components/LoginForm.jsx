@@ -12,6 +12,8 @@ const LoginForm = ({ isRegister }) => {
   const { login } = useUser();
 
   const [isLogin, setIsLogin] = useState(true);
+  const [message, setMessage] = useState("");
+  const [showMessage, setShowMessage] = useState(false);
 
   const [user, setUser] = useState({
     username: "",
@@ -36,15 +38,26 @@ const LoginForm = ({ isRegister }) => {
     try {
       if (isRegister) {
         await registerUser(user);
-        console.log("User registered successfully");
+        setMessage("User registered successfully");
+        setShowMessage(true);
+        setTimeout(() => {
+          setShowMessage(false);
+          navigate("/");
+        }, 3000);
       } else {
         const loggedInUser = await loginUser(loginDetails);
         login(loggedInUser);
-        console.log("Login successful");
-        navigate("/")
+        setMessage("Login successful");
+        setShowMessage(true);
+        setTimeout(() => {
+          setShowMessage(false);
+          navigate("/");
+        }, 3000);
       }
     } catch (err) {
-      console.log("Error in user form", err);
+      setMessage("Error: " + (err.response?.data?.message || "Something went wrong"));
+      setShowMessage(true);
+      setTimeout(() => setShowMessage(false), 3000);
     }
   };
 
@@ -224,6 +237,7 @@ const LoginForm = ({ isRegister }) => {
         </div>
         </>
       )}
+      {showMessage && <div className="message-box">{message}</div>}
     </div>
   );
 };
