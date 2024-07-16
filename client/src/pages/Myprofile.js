@@ -2,22 +2,23 @@ import React, { useState } from 'react'
 import { updateUserProfile } from '../services/userService'
 import "./Myprofile.css"
 import { useUser } from "../userContext/UserContext";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 import logo from "../Assets/logo.png";
 
 
 function Myprofile() {
+  const { user, updateUser } = useUser();
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    username: '',
-    email: '',
+    username: user.username || '',
+    email: user.email || '',
     password: '',
-    age: '',
-    gender: '',
-    height: '',
-    currentWeight: '',
-    goal: '',
-    active: '',
+    age: user.age || '',
+    gender: user.gender || '',
+    height: user.height || '',
+    currentWeight: user.currentWeight || '',
+    goal: user.goal || '',
+    active: user.active || '',
   });
 
   const handleChange = (e) => {
@@ -35,10 +36,11 @@ function Myprofile() {
   const handleUpdateDetails = async (e) => {
     e.preventDefault();
     const { username, email, password, age, gender, height, currentWeight, goal, active } = formData;
-    const user = { username, email, password, age, gender, height, currentWeight, goal, active };
+    const userData  = { username, email, password, age, gender, height, currentWeight, goal, active };
 
     try {
-      await updateUserProfile(user);
+      await updateUserProfile(userData);
+      updateUser(userData);
       console.log("User updated successfully");
       navigate("/")
     } catch (err) {
