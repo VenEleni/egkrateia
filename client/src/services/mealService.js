@@ -1,6 +1,8 @@
 import axios from 'axios';
 
-const API_URL = 'https://diettracker-hwjz.onrender.com/meals';
+
+const BACKEND_URI = process.env.REACT_APP_BACKEND_URI;
+const API_URL = BACKEND_URI+'/meals';
 
 export const getMeals = async () => {
   return await axios.get(API_URL, {

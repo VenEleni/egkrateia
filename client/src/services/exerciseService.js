@@ -1,7 +1,10 @@
 import axios from 'axios';
 // import Exercise from '../../../server/models/Exercise';
 
-const API_URL = 'https://diettracker-hwjz.onrender.com/exercise';
+
+const BACKEND_URI = process.env.REACT_APP_BACKEND_URI;
+const API_URL = BACKEND_URI+'/exercise';
+
 
 export const addExercise = async (activity) => {
   console.log("Test")
