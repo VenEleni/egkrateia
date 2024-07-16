@@ -24,7 +24,6 @@ const Meals = () => {
 
   const fetchMeals = async () => {
     const response = await getMeals();
-    console.log(response.data);
     setMeals(response.data);
   };
 
@@ -53,10 +52,6 @@ const Meals = () => {
     fetchData();
   }, []);
 
-  useEffect(() => {
-    SetFoodCalories(meals.reduce((total, meal) => total + meal.calories, 0));
-  }, [meals]); // Depend on meals state
-
   const handleDelete = async (id) => {
     await deleteMeal(id);
     fetchMeals();
@@ -79,6 +74,10 @@ const Meals = () => {
   const filteredExercises = Exercise.filter(
     (ex) => new Date(ex.date).toDateString() === selectedDate.toDateString()
   );
+
+  useEffect(() => {
+    SetFoodCalories(filteredMeals.reduce((total, meal) => total + meal.calories, 0));
+  }, [filteredMeals]); // Depend on meals state
 
   useEffect(() => {
     const totalExerciseCalories = filteredExercises.reduce((acc, ex) => {
