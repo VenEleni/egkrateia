@@ -71,3 +71,35 @@ exports.getgoalCalories = async (req, res) => {
     res.status(500).json({ message: err.message });
   }
 };
+
+exports.updateUser = async (req, res) => {
+  const userId = req.user.userId; 
+  const { username, email, age, gender, height, currentWeight, goal, active, password } = req.body;
+
+  try {
+    let user = await User.findById(userId);
+
+    if (!user) {
+      return res.status(404).json({ message: "User not found" });
+    }
+
+    if (username) user.username = username;
+    if (email) user.email = email;
+    if (age) user.age = age;
+    if (gender) user.gender = gender;
+    if (height) user.height = height;
+    if (currentWeight) user.currentWeight = currentWeight;
+    if (goal) user.goal = goal;
+    if (active) user.active = active;
+    if (password) {
+      const salt = await bcrypt.genSalt(10);
+      user.password = await bcrypt.hash(password, salt);
+    }
+
+    await user.save();
+    res.status(200).json({ message: "User updated successfully" });
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).json({ message: "Error updating user" });
+  }
+};
