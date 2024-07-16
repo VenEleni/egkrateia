@@ -2,12 +2,15 @@ import React, { useState } from 'react';
 import { addMeal } from '../services/mealService';
 import { AutoCompleteFood, getFoodID, getNutrients, getCalories } from '../services/AutoCompleteFood';
 import './MealForm.css';
+import { useNavigate, Link } from 'react-router-dom';
 
 const MealForm = ({ refreshMeals, existingMeal, handleUpdate, setEditingMeal }) => {
   const [meal, setMeal] = useState(existingMeal || { name: '', date: '', mealType: '', calories: '' });
   const [queryList, setQueryList] = useState([]);
   const [FoodID, setFoodID] = useState("");
   const [Calories, setCalories] = useState("");
+
+  const navigate = useNavigate()
   
   const handleChange = (e) => {
     setMeal({ ...meal, [e.target.name]: e.target.value });
@@ -24,12 +27,15 @@ const MealForm = ({ refreshMeals, existingMeal, handleUpdate, setEditingMeal }) 
     e.preventDefault();
     if (existingMeal) {
       await handleUpdate(meal);
+      navigate("/meals")
     } else {
       await addMeal(meal);
       refreshMeals();
       setMeal({ name: '', date: '', mealType: '', calories: '' });
       setCalories('');
+      navigate("/meals")
     }
+    
   };
 
   const handelNameClick = async (value) =>{
@@ -75,6 +81,7 @@ const MealForm = ({ refreshMeals, existingMeal, handleUpdate, setEditingMeal }) 
       </select>
       <input type="number" name="calories" placeholder="Calories" value={(Calories) ? Calories : meal.calories} onChange={handleChange} required />
       <button type="submit">{existingMeal ? 'Update Meal' : 'Add Meal'}</button>
+      <Link to="/meals"><button>Cancel</button></Link>
       {existingMeal && <button onClick={handleCancel}>{existingMeal ? 'Cancel' : ''}</button>}
     </form>
   );

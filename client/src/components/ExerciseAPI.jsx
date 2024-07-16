@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./ExerciseAPI.css";
 import { addExercise } from "../services/exerciseService";
+import {useNavigate, Link} from "react-router-dom"
 
 function ExerciseAPI() {
   const [activity, setActivity] = useState("");
@@ -15,6 +16,7 @@ function ExerciseAPI() {
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
 
+  const navigate = useNavigate()
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -67,10 +69,11 @@ function ExerciseAPI() {
     console.log(activityData);
     // You can add additional logic here to handle the submitted activity data.
     addExercise(activityData)
+    navigate("/meals")
   };
 
   return (
-    <>
+    <div className="Exercise-Container">
       <form className="meal-form" onSubmit={handleAddExercise}>
         <h3>Add Exercise</h3>
         <input
@@ -119,9 +122,10 @@ function ExerciseAPI() {
           disabled
         />
         <button type="submit">Add Exercise</button>
+        <Link to="/meals"><button>Cancel</button></Link>
       </form>
       {error && <p>{error}</p>}
-    </>
+    </div>
   );
 }
 

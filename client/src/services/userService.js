@@ -5,7 +5,10 @@ const API_URL = 'http://localhost:5001/users';
 
 export const registerUser = async (user) => {
   console.log(user)
-  return await axios.post(`${API_URL}/register`, user);
+  await axios.post(`${API_URL}/register`, user)
+  .then((e) => {
+    console.log(e)
+  })
 };
 
 export const loginUser = async (user) => {
