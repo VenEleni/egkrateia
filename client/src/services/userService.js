@@ -22,3 +22,11 @@ export const getUserCalories = async () => {
   });
   return response.data;
 };
+
+export const updateUserProfile = async (user) => {
+  const response = await axios.put(`${API_URL}/myprofile`, user, {
+    headers: { "x-auth-token": `${localStorage.getItem("token")}`
+    }
+    });
+    return response.data;
+}
