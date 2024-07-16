@@ -38,7 +38,9 @@ exports.loginUser = async (req, res) => {
         userId: user.id,
         username: user.username,
         email: user.email,
-        goalCalories: user.goalCalories
+        goalCalories: user.goalCalories,
+        gender: user.gender,
+        height: user.height
       },
     };
     const token = jwt.sign(
