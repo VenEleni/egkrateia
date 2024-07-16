@@ -86,7 +86,7 @@ export default function Summary({Base, Food, Exercise}) {
             />
             <h1>
               {" "}
-              <span>{data[0].value}</span> <br />
+              <span>{Math.floor(data[0].value)}</span> <br />
               Remaining{" "}
             </h1>
           </div>

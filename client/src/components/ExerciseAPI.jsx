@@ -3,7 +3,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./ExerciseAPI.css";
 import { addExercise } from "../services/exerciseService";
-import {useNavigate, Link} from "react-router-dom"
+import {useNavigate, Link} from "react-router-dom";
+import NavBar from "./Navbar";
 
 function ExerciseAPI() {
   const [activity, setActivity] = useState("");
@@ -73,6 +74,8 @@ function ExerciseAPI() {
   };
 
   return (
+    <>
+    <NavBar/>
     <div className="Exercise-Container">
       <form className="meal-form" onSubmit={handleAddExercise}>
         <h3>Add Exercise</h3>
@@ -126,6 +129,7 @@ function ExerciseAPI() {
       </form>
       {error && <p>{error}</p>}
     </div>
+    </>
   );
 }
 
