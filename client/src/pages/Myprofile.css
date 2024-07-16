@@ -65,6 +65,15 @@ body {
   background: transparent;
 }
 
+.update-box .user-box select option {
+  color: #03e9f4; 
+  background-color: #243b55; 
+}
+
+.update-box .user-box select:focus {
+  border-bottom: 1px solid #03e9f4; 
+}
+
 .update-box .user-box label {
   position: absolute;
   top: -20px;
