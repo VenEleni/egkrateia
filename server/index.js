@@ -10,9 +10,10 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5001;
 const MONGO_URI = process.env.MONGO_URI;
+const FRONTEND_URI = process.env.FRONTEND_URI
 
 app.use(cors({
-  origin: 'http://localhost:3000', // allow your client app
+  origin: FRONTEND_URI, // allow your client app
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // allowed methods
   allowedHeaders: ['Content-Type', 'Authorization', 'x-auth-token'], // allowed headers
   credentials: true // if you need to send cookies or other credentials

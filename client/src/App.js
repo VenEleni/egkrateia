@@ -15,6 +15,7 @@ import Addmeal from './pages/Addmeal';
 import Myprofile from './pages/Myprofile';
 
 const App = () => {
+
   return (
     <UserProvider>
 <Router>

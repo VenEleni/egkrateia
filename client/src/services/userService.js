@@ -1,7 +1,9 @@
 import axios from 'axios';
 import {jwtDecode} from 'jwt-decode'
 
-const API_URL = 'https://diettracker-hwjz.onrender.com/users';
+
+const BACKEND_URI = process.env.REACT_APP_BACKEND_URI;
+const API_URL = BACKEND_URI+'/users';
 
 export const registerUser = async (user) => {
   console.log(user)
