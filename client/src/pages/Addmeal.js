@@ -1,11 +1,16 @@
 import './Meals.css';
 import MealForm from '../components/MealForm';
+import "./Addmeal.css"
 
 import React from 'react'
+import NavBar from '../components/Navbar';
 
 function Addmeal() {
   return (
-    <MealForm refreshMeals={() => {}} />
+    <>
+    <NavBar/>
+    <MealForm refreshMeals={() => {}} style={{ marginTop: '600px' }} />
+    </>
   )
 }
 
