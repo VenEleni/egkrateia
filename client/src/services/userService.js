@@ -1,7 +1,7 @@
 import axios from 'axios';
 import {jwtDecode} from 'jwt-decode'
 
-const API_URL = 'http://localhost:5001/users';
+const API_URL = 'https://diettracker-hwjz.onrender.com/users';
 
 export const registerUser = async (user) => {
   console.log(user)

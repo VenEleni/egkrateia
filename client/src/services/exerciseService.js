@@ -1,7 +1,7 @@
 import axios from 'axios';
 // import Exercise from '../../../server/models/Exercise';
 
-const API_URL = 'http://localhost:5001/exercise';
+const API_URL = 'https://diettracker-hwjz.onrender.com/exercise';
 
 export const addExercise = async (activity) => {
   console.log("Test")
