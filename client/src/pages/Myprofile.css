@@ -1,5 +1,5 @@
 html {
-  height: 145%;
+  height: 139%;
 }
 body {
   margin: 0;
@@ -19,15 +19,17 @@ body {
   margin-bottom: 400px;
   padding-bottom: 30px;
   top: 0;
+  margin-top: -40px;
 }
 
 .update-box {
   position: relative;
-  top: 50%;
+  top: 10%;
   left: 50%;
   width: 400px;
   padding: 40px;
   margin-bottom: -300px;
+  margin-top: 40px;
   transform: translate(-50%, -50%);
   background: rgba(0, 0, 0, 0.5);
   box-sizing: border-box;
@@ -87,6 +89,7 @@ body {
   position: relative;
   display: inline-block;
   padding: 10px 20px;
+  /* margin-top: -90px; */
   color: #03e9f4;
   font-size: 16px;
   text-decoration: none;

@@ -28,6 +28,10 @@ function Myprofile() {
     });
   };
 
+  const goBackToHome = () => {
+    navigate('/')
+  }
+
   const handleUpdateDetails = async (e) => {
     e.preventDefault();
     const { username, email, password, age, gender, height, currentWeight, goal, active } = formData;
@@ -164,6 +168,9 @@ function Myprofile() {
         </div>
         <a href="#" onClick={handleUpdateDetails}>
             Save Changes
+          </a>
+          <a href="#" onClick={goBackToHome}>
+            Go Back
           </a>
       </form>
     </div>
