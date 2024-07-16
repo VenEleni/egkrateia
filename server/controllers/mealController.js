@@ -34,12 +34,16 @@ exports.updateMeal = async (req, res) => {
   }
 };
 
+
 exports.deleteMeal = async (req, res) => {
   const { id } = req.params;
 
   try {
-    await Meal.findByIdAndDelete({id, user: req.user.userId});
-    res.status(200).json({ message: 'Meal deleted successfully' });
+    const deletedMeal= await Meal.findByIdAndDelete(id, {user: req.user.userId});
+    if (!deletedMeal) {
+      return res.status(404).json({ message: 'Meal not found' });
+    }
+    res.status(200).json(deletedMeal);
   } catch (err) {
     res.status(400).json({ message: err.message });
   }

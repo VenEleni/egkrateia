@@ -57,8 +57,8 @@ const Meals = () => {
     SetFoodCalories(meals.reduce((total, meal) => total + meal.calories, 0));
   }, [meals]); // Depend on meals state
 
-  const handleDelete = async (id) => {
-    await deleteMeal(id);
+  const handleDelete = async (_id) => {
+    await deleteMeal(_id);
     fetchMeals();
   };
 
